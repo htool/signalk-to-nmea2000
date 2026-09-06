@@ -6,7 +6,9 @@ Emit display lighting PGNs from vendor Signal K paths. Policy (when to dim) live
 
 ## Already here
 
-- Raymarine brightness: `electrical.displays.raymarine.<group>.brightness` (0–1) → PGN 126720 Display Brightness (`conversions/raymarineBrightness.js`).
+- Raymarine brightness: `electrical.displays.raymarine.<group>.brightness` (0–1) → PGN 126720 Display Brightness (`conversions/raymarineDisplayBrightness.js`).
+- Raymarine color: `electrical.displays.raymarine.<group>.color` → PGN 126720 Display Color (`conversions/raymarineDisplayColor.js`).
+- Navico lighting: `electrical.displays.navico.<group>.*` → PGN 130845 (`conversions/navicoDisplays.js`).
 
 ## Add (one commit each)
 
@@ -17,7 +19,7 @@ Emit display lighting PGNs from vendor Signal K paths. Policy (when to dim) live
 | F1 | Navico night color | `electrical.displays.navico.<group>.nightModeColor` | 130845 key Night mode color, 0–4 red…magenta | `green` → Value 1 | done |
 | F2 | Raymarine color | `electrical.displays.raymarine.<group>.color` | 126720 Display Color | `red/black` → Color Red/Black | done (`conversions/raymarineDisplayColor.js`) |
 
-Follow the group-mapping options pattern in `raymarineBrightness.js`. Do not regress that conversion.
+Follow the group-mapping options pattern in the other display conversions.
 
 Native scales and palettes: n2k-displays [ADR 0001](https://github.com/htool/signalk-n2k-displays/blob/showcase/instrument-lighting/docs/adr/0001-intent-and-actuation-paths.md) and [ADR 0003](https://github.com/htool/signalk-n2k-displays/blob/showcase/instrument-lighting/docs/adr/0003-palettes-are-device-native.md). Encode ownership: [ADR 0004](https://github.com/htool/signalk-n2k-displays/blob/showcase/instrument-lighting/docs/adr/0004-converter-owns-n2k-encode.md).
 
