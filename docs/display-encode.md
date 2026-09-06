@@ -2,7 +2,7 @@
 
 ## Job
 
-Emit display lighting PGNs from vendor Signal K paths. Policy (when to dim) lives in signalk-n2k-displays, not here.
+Emit display lighting PGNs from vendor Signal K paths. Policy (when to dim, which night palette) lives in signalk-n2k-displays, not here.
 
 ## Already here
 
