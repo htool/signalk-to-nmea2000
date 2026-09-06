@@ -2,7 +2,9 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/sbender9/signalk-to-nmea2000.svg)](https://greenkeeper.io/)
 
-Plugin to convert Signal K to NMEA2000
+Plugin to convert Signal K to NMEA2000.
+
+Plugins should write Signal K paths; this plugin encodes NMEA 2000 via canboatjs. Display lighting conversions (Navico 130845, Raymarine color) for the instrument-lighting showcase: [docs/display-encode.md](docs/display-encode.md). Agents: [AGENTS.md](AGENTS.md).
 
 Requires that toChildProcess be set to nmea2000out for the actisense execute provider:
 
