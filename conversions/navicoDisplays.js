@@ -17,6 +17,8 @@ function simnetKeyValue (displayGroup, key, value) {
     'Industry Code': 'Marine Industry',
     'Display Group': displayGroup,
     Key: key,
+    Spare: 0,
+    MinLength: 1,
     Value: value
   }
 }
@@ -86,6 +88,8 @@ module.exports = (app, plugin) => {
                   'Industry Code': 'Marine Industry',
                   'Display Group': 'Group 1',
                   Key: 'Backlight level',
+                  Spare: 0,
+                  MinLength: 1,
                   Value: 50
                 }
               }]
@@ -97,7 +101,7 @@ module.exports = (app, plugin) => {
               if (state == null) {
                 return []
               }
-              return [simnetKeyValue(group.instanceId, 'Night mode', state == 1 ? 4 : 2)]
+              return [simnetKeyValue(group.instanceId, 'Night mode', state == 1 ? 4 : 1)]
             },
             tests: [{
               input: [1],
@@ -110,6 +114,8 @@ module.exports = (app, plugin) => {
                   'Industry Code': 'Marine Industry',
                   'Display Group': 'Group 1',
                   Key: 'Night mode',
+                  Spare: 0,
+                  MinLength: 1,
                   Value: 4
                 }
               }]
@@ -134,6 +140,8 @@ module.exports = (app, plugin) => {
                   'Industry Code': 'Marine Industry',
                   'Display Group': 'Group 1',
                   Key: 'Night mode color',
+                  Spare: 0,
+                  MinLength: 1,
                   Value: 1
                 }
               }]

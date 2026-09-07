@@ -15,7 +15,7 @@ Emit display lighting PGNs from vendor Signal K paths. Policy (when to dim, whic
 | ID | Conversion | SK path | PGN / fields | Test | Status |
 | --- | --- | --- | --- | --- | --- |
 | F1 | Navico backlight | `electrical.displays.navico.<group>.brightness` | 130845 key Backlight level, value = brightness × 100 | 0.5 → Value 50 | done (`conversions/navicoDisplays.js`) |
-| F1 | Navico night mode | `electrical.displays.navico.<group>.nightMode.state` | 130845 key Night mode, 4 = night, 2 = day | 1 → Value 4 | done |
+| F1 | Navico night mode | `electrical.displays.navico.<group>.nightMode.state` | 130845 key Night mode, 4 = night, 1 = day | 1 → Value 4 | done |
 | F1 | Navico night color | `electrical.displays.navico.<group>.nightModeColor` | 130845 key Night mode color, 0–4 red…magenta | `green` → Value 1 | done |
 | F2 | Raymarine color | `electrical.displays.raymarine.<group>.color` | 126720 Display Color | `red/black` → Color Red/Black | done (`conversions/raymarineDisplayColor.js`) |
 

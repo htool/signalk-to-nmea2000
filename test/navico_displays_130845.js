@@ -21,8 +21,8 @@ describe('Navico / B&G Display (130845)', function () {
     colorConv.callback('unknown').should.deep.equal([])
   })
 
-  it('maps day nightMode.state 0 to Value 2', function () {
+  it('maps day nightMode.state 0 to Value 1', function () {
     const nightConv = subs.find(s => s.keys[0].endsWith('nightMode.state'))
-    nightConv.callback(0)[0].Value.should.equal(2)
+    nightConv.callback(0)[0].Value.should.equal(1)
   })
 })
