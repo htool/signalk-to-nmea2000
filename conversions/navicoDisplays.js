@@ -4,8 +4,7 @@ const nightModeColors = {
   red: 0,
   green: 1,
   blue: 2,
-  white: 3,
-  magenta: 4
+  white: 3
 }
 
 function simnetKeyValue (displayGroup, key, value) {

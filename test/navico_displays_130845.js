@@ -19,6 +19,7 @@ describe('Navico / B&G Display (130845)', function () {
   it('skips unknown night mode color', function () {
     const colorConv = subs.find(s => s.keys[0].endsWith('nightModeColor'))
     colorConv.callback('unknown').should.deep.equal([])
+    colorConv.callback('magenta').should.deep.equal([])
   })
 
   it('maps day nightMode.state 0 to Value 1', function () {
