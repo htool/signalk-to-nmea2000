@@ -6,9 +6,9 @@ Emit display lighting PGNs from vendor Signal K paths. Policy (when to dim, whic
 
 ## Already here
 
-- Raymarine brightness: `electrical.displays.raymarine.<group>.brightness` (0–1) → PGN 126720 Display Brightness (`conversions/raymarineDisplayBrightness.js`).
+- Raymarine brightness: Scott’s `conversions/raymarineBrightness.js` — `electrical.displays.raymarine.<group>.brightness` (0–1) → PGN 126720 Display Brightness (0.85 → 85). Enable `RAYMARINE` and set `groups`.
 - Raymarine color: `electrical.displays.raymarine.<group>.color` → PGN 126720 Display Color (`conversions/raymarineDisplayColor.js`).
-- Navico lighting: `electrical.displays.navico.<group>.*` → PGN 130845 (`conversions/navicoDisplays.js`).
+- Navico lighting: `electrical.displays.navico.<group>.*` → PGN 130845 (`conversions/navicoDisplays.js`). Scott has no 130845 conversion.
 
 ## Add (one commit each)
 

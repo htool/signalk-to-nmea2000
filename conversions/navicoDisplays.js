@@ -78,14 +78,16 @@ module.exports = (app, plugin) => {
             tests: [{
               input: [0.5],
               expected: [{
+                prio: 3,
                 pgn: 130845,
                 dst: 255,
-                prio: 3,
-                'Manufacturer Code': 'Simrad',
-                'Industry Code': 'Marine Industry',
-                'Display Group': 'Group 1',
-                Key: 'Backlight level',
-                Value: 50
+                fields: {
+                  'Manufacturer Code': 'Simrad',
+                  'Industry Code': 'Marine Industry',
+                  'Display Group': 'Group 1',
+                  Key: 'Backlight level',
+                  Value: 50
+                }
               }]
             }]
           },
@@ -100,14 +102,16 @@ module.exports = (app, plugin) => {
             tests: [{
               input: [1],
               expected: [{
+                prio: 3,
                 pgn: 130845,
                 dst: 255,
-                prio: 3,
-                'Manufacturer Code': 'Simrad',
-                'Industry Code': 'Marine Industry',
-                'Display Group': 'Group 1',
-                Key: 'Night mode',
-                Value: 4
+                fields: {
+                  'Manufacturer Code': 'Simrad',
+                  'Industry Code': 'Marine Industry',
+                  'Display Group': 'Group 1',
+                  Key: 'Night mode',
+                  Value: 4
+                }
               }]
             }]
           },
@@ -122,14 +126,16 @@ module.exports = (app, plugin) => {
             tests: [{
               input: ['green'],
               expected: [{
+                prio: 3,
                 pgn: 130845,
                 dst: 255,
-                prio: 3,
-                'Manufacturer Code': 'Simrad',
-                'Industry Code': 'Marine Industry',
-                'Display Group': 'Group 1',
-                Key: 'Night mode color',
-                Value: 1
+                fields: {
+                  'Manufacturer Code': 'Simrad',
+                  'Industry Code': 'Marine Industry',
+                  'Display Group': 'Group 1',
+                  Key: 'Night mode color',
+                  Value: 1
+                }
               }]
             }]
           }

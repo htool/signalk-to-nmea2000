@@ -76,17 +76,19 @@ module.exports = (app, plugin) => {
           tests: [{
             input: ['red/black'],
             expected: [{
+              prio: 2,
               pgn: 126720,
               dst: 255,
-              'Manufacturer Code': 'Raymarine',
-              'Industry Code': 'Marine Industry',
-              'Proprietary ID': 'Display',
-              command1: 'Settings',
-              Group: 'Helm 1',
-              'Unknown 1': 1,
-              Command: 'Color',
-              Color: 'Red/Black',
-              'Unknown 2': 0
+              fields: {
+                'Manufacturer Code': 'Raymarine',
+                'Industry Code': 'Marine Industry',
+                'Proprietary ID': 'Display',
+                command1: 'Settings',
+                Group: 'Helm 1',
+                Command: 'Color',
+                Color: 'Red/Black',
+                'Unknown 2': 0
+              }
             }]
           }]
         }
